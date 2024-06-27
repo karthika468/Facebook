@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="chrometest(failed)">
+    <parameter name="browsers" value="chrome"/>
+    <classes>
+      <class name="TextCases.Tc04CrossBrowserTest">
+        <methods>
+          <include name="logIn"/>
+          <include name="browserSetup"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- TextCases.Tc04CrossBrowserTest -->
+    </classes>
+  </test> <!-- chrometest(failed) -->
+  <test thread-count="5" parallel="tests" name="edgetest(failed)">
+    <parameter name="browsers" value="msedge"/>
+    <classes>
+      <class name="TextCases.Tc04CrossBrowserTest">
+        <methods>
+          <include name="logIn"/>
+          <include name="browserSetup"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- TextCases.Tc04CrossBrowserTest -->
+    </classes>
+  </test> <!-- edgetest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
